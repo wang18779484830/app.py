@@ -1,0 +1,405 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "69fb6d1d-7486-4bfd-a48b-7008b6a86c61",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "파이썬짱! 5\n"
+     ]
+    }
+   ],
+   "source": [
+    "ss='파이썬짱!'\n",
+    "\n",
+    "sslen=len(ss)\n",
+    "\n",
+    "print(ss, sslen)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "7ba470f0-d3dd-4026-a0ff-967d262f1ccf",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "문자열을 입력하세요 :  안녕하세요\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "내용을 거꾸로 출력--> 요세하녕안 \n"
+     ]
+    }
+   ],
+   "source": [
+    "instr,outstr = \"\",\"\"\n",
+    "count, i = 0,0 \n",
+    "\n",
+    "instr = input(\"문자열을 입력하세요 : \")\n",
+    "count = len(instr)\n",
+    "\n",
+    "for i in range(0,count):\n",
+    "    outstr += instr[count-(i+1)]\n",
+    "\n",
+    "print(\"내용을 거꾸로 출력--> %s \" % outstr)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "2428d65f-b088-45ff-91d3-d93e50fd29f4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "PYTHON IS EASY. 그래서 PROGRAMING이 재미있지 말입니다^^\n",
+      "python is easy. 그래서 programing이 재미있지 말입니다^^\n",
+      "PYTHON IS EASY. 그래서 PROGRAMING이 재미있지 말입니다^^\n",
+      "Python Is Easy. 그래서 Programing이 재미있지 말입니다^^\n"
+     ]
+    }
+   ],
+   "source": [
+    "ss='python is easy. 그래서 programing이 재미있지 말입니다^^'\n",
+    "print(ss.upper())\n",
+    "print(ss.lower())\n",
+    "print(ss.swapcase())\n",
+    "print(ss.title())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "65892fdd-6ac6-44f5-8bae-48c8bfb091e1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "문자열 입력==> 파이썬 열공중~~ \n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "출력 문자열==>(파이썬 열공중~~ )"
+     ]
+    }
+   ],
+   "source": [
+    "ss=input(\"문자열 입력==>\")\n",
+    "print(\"출력 문자열==>\",end='')\n",
+    "\n",
+    "if ss.startswith('(') == False :\n",
+    "      print(\"(\",end='')\n",
+    "\n",
+    "print(ss, end='')\n",
+    "\n",
+    "if ss.endswith('(') == False :\n",
+    "    print(\")\", end='')\n",
+    "    \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "b4dc2044-441f-4784-a511-67aa59829e2c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'파   이   썬'"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ss = '   파   이   썬   '\n",
+    "ss.strip()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "0d31ee3f-f30a-48fc-b248-4f2514909d4b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'   파   이   썬'"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ss.rstrip()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "6db77242-35de-46c2-a1b0-ce7a9f72da60",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'파   이   썬   '"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ss.lstrip()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "fb74ac16-86d1-493a-9ca9-cbf410d59c3d",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'파---이---썬'"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#특수문자 제거\n",
+    "\n",
+    "ss = '---파---이---썬---'\n",
+    "\n",
+    "ss.strip('-')\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "9a819733-c565-4630-b28b-51b3daeee31e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "파 << 이 >> 썬\n"
+     ]
+    }
+   ],
+   "source": [
+    "#특수문자 제거\n",
+    "\n",
+    "ss = '<<<파 << 이 >> 썬>>>'\n",
+    "\n",
+    "print(ss.strip('<>'))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "147d3183-7dba-461f-89bd-c01be584a0fa",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "원 문자열 ==>[   한글   python   프로그래밍   ]\n",
+      "공백 제거 ==>[한글python프로그래밍]\n"
+     ]
+    }
+   ],
+   "source": [
+    "instr = \"   한글   python   프로그래밍   \"\n",
+    "outstr = \"\"\n",
+    "\n",
+    "for i in range(0, len(instr)) :\n",
+    "    if instr[i] != ' ' :\n",
+    "        outstr += instr[i]\n",
+    "\n",
+    "print(\"원 문자열 ==>\"+'['+instr+']')\n",
+    "print(\"공백 제거 ==>\"+'['+outstr+']')\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "64722c67-5781-4785-8f79-ee9876b86f4c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['python을', '열심히', '공부', '중']"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#문자열 분리, 결합\n",
+    "\n",
+    "ss = 'python을 열심히 공부 중'\n",
+    "ss.split()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "b65c582c-72ce-4212-9e6c-dc34ea0dbf68",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['하나', '둘', '셋']"
+      ]
+     },
+     "execution_count": 22,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ss = '하나:둘:셋'\n",
+    "ss.split(':')\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "44ea3c0f-69ec-4a7f-8402-b4602a1a6d6f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['하나', '둘', '셋']"
+      ]
+     },
+     "execution_count": 24,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ss = '하나\\n둘\\n셋'\n",
+    "ss.splitlines()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "6f64ebe9-eef5-4ceb-9181-1731dd911726",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'파%이%썬'"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ss = \"%\"\n",
+    "ss.join(\"파이썬\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "c1973961-2f61-47cf-9fcc-aa7a9650d2d4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "날짜(연/월/일) 입력==> 2019/12/31\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "입력한 날짜의 10년 후==>2029년12월31일\n"
+     ]
+    }
+   ],
+   "source": [
+    "ss = input(\"날짜(연/월/일) 입력==>\")\n",
+    "\n",
+    "sslist = ss.split('/')\n",
+    "\n",
+    "print(\"입력한 날짜의 10년 후==>\",end = '')\n",
+    "print(str(int(sslist[0])+10)+\"년\",end = '')\n",
+    "print(sslist[1]+\"월\",end = '')\n",
+    "print(sslist[2]+\"일\")\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
